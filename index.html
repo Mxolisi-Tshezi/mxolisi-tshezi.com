@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #001f3f, #00509e);
+            background: linear-gradient(to bottom, #000c2d, #003366, #001f3f);
             color: white;
             overflow-x: hidden;
         }
@@ -33,21 +33,47 @@
             }
         }
 
+        /* Animation for the text */
+        header h2, header h1, header p {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.5s ease forwards;
+        }
+
+        header h2 {
+            font-size: 2.5rem;
+            color: #1d2847;
+            animation-delay: 0.3s;
+        }
+
         header h1 {
             font-size: 4rem;
-            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+            text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.9);
+            animation-delay: 0.8s;
         }
 
         header p {
             font-size: 1.5rem;
             margin: 10px 0;
+            animation-delay: 1.3s;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             padding: 10px;
             display: flex;
             justify-content: center;
@@ -59,11 +85,12 @@
             margin: 0 15px;
             text-decoration: none;
             font-weight: bold;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
         nav a:hover {
-            color: #00c3ff;
+            color: #00b2e1;
+            transform: scale(1.1);
         }
 
         section {
@@ -83,8 +110,14 @@
             display: inline-block;
             margin: 10px;
             padding: 10px 20px;
-            background: #00509e;
+            background: #041a31;
             border-radius: 5px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        #skills ul li:hover {
+            background: #00509e;
+            transform: scale(1.1);
         }
 
         .project {
@@ -101,8 +134,8 @@
             border: 1px solid white;
             border-radius: 5px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.8);
-            transition: transform 0.3s;
+            background: rgba(0, 0, 0, 0.85);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project div img {
@@ -112,6 +145,7 @@
 
         .project div:hover {
             transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
         }
 
         .certificate, .achievement {
@@ -125,9 +159,14 @@
             width: 200px;
             margin: 10px;
             text-align: center;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             border-radius: 5px;
             padding: 10px;
+            transition: box-shadow 0.3s;
+        }
+
+        .certificate div:hover, .achievement div:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
         }
 
         .certificate div img, .achievement div img {
@@ -142,13 +181,14 @@
         }
 
         footer a {
-            color: #00c3ff;
+            color: #00b2e1;
             text-decoration: none;
         }
     </style>
 </head>
 <body>
     <nav>
+        <a href="index.html">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
@@ -160,25 +200,32 @@
 
     <header>
         <div>
-            <h1>John Doe</h1>
+            <h2 style="color: #1d2847;">Hello!</h2> <h2>I am </h2> <h1>Mxolisi Tshezi</h1>
             <p>Cloud Engineer & Full-Stack Developer</p>
         </div>
     </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I specialize in building scalable cloud solutions and full-stack web applications. With a passion for clean code and cutting-edge technology, I bring ideas to life efficiently and effectively.</p>
+        <p>A Software Developer and Cloud Engineer with over 3 years of experience in security operations, cloud security, DevSecOps, and infrastructure as code. Proven ability to deliver exceptional user experiences and develop scalable solutions using React and other JavaScript frameworks/libraries. Passionate about learning new technologies, collaborating with teams, and continuously improving code quality.</p>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>JavaScript</li>
             <li>Python</li>
-            <li>React</li>
             <li>Node.js</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>Strapi</li>
+            <li>Redux</li>
             <li>Docker</li>
+            <li>Kubernetes</li>
             <li>AWS</li>
+            <li>Azure</li>
+            <li>Terraform</li>
         </ul>
     </section>
 
@@ -186,22 +233,12 @@
         <h2>Projects</h2>
         <div class="project">
             <div>
-                <img src="https://source.unsplash.com/300x200/?technology" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>A web application for real-time collaboration.</p>
-                <a href="https://github.com/yourgithub/project1" target="_blank">View on GitHub</a>
-            </div>
-            <div>
-                <img src="https://source.unsplash.com/300x200/?coding" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Automated deployment system using Docker and AWS.</p>
-                <a href="https://github.com/yourgithub/project2" target="_blank">View on GitHub</a>
-            </div>
-            <div>
-                <img src="https://source.unsplash.com/300x200/?development" alt="Project 3">
-                <h3>Project 3</h3>
-                <p>E-commerce platform with payment integration.</p>
-                <a href="https://github.com/yourgithub/project3" target="_blank">View on GitHub</a>
+                <img src="/images/Yonke.png" alt="Yonke Online Marketplace">
+                <h3>Yonke Online Marketplace</h3>
+                <p>An e-commerce website enabling SME owners to list their products and services. Built with MongoDB, Express.js, React.js, and Node.js, it uses Cloudinary, PayPal, and Mailgun APIs.</p>
+                <a href="https://yonke-app.onrender.com/" target="_blank">View Demo</a><br><br>
+                <a href="https://github.com/Mxolisi-Tshezi/Yonke" target="_blank">View on GitHub</a>
+                
             </div>
         </div>
     </section>
@@ -210,32 +247,22 @@
         <h2>Certifications</h2>
         <div class="certificate">
             <div>
-                <img src="https://source.unsplash.com/200x150/?certificate" alt="Certification 1">
-                <p>AWS Certified Solutions Architect</p>
+                <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Professional_badge.69d82ff1b2861e1089539ebba906c70b011b928a.png" alt="AWS Certifications">
+                <p>AWS Certified Solutions Architect Professional</p>
             </div>
             <div>
-                <img src="https://source.unsplash.com/200x150/?badge" alt="Certification 2">
-                <p>Google Cloud Professional Engineer</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <div class="achievement">
-            <div>
-                <img src="https://source.unsplash.com/200x150/?award" alt="Achievement 1">
-                <p>Best KPI Performance Award 2023</p>
+                <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Professional_badge.69d82ff1b2861e1089539ebba906c70b011b928a.png" alt="AWS Certifications">
+                <p>AWS DevOps Engineer Professional</p>
             </div>
             <div>
-                <img src="https://source.unsplash.com/200x150/?recognition" alt="Achievement 2">
-                <p>Employee of the Year 2022</p>
+                <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Solutions-Architect-Professional_badge.69d82ff1b2861e1089539ebba906c70b011b928a.png" alt="AWS Certifications">
+                <p>AWS Certified Developer - Associate</p>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 John Doe. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+        <p>&copy; 2024 Mxolisi Tshezi. All Rights Reserved. | <a href="#contact">Contact</a></p>
     </footer>
 </body>
 </html>
