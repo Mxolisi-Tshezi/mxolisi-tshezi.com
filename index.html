@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Cloud Engineer & Full-Stack Developer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #001f3f, #00509e);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://source.unsplash.com/1600x900/?clouds,technology') no-repeat center/cover;
+            animation: background-pan 20s infinite linear;
+        }
+
+        @keyframes background-pan {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 100% 100%;
+            }
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00c3ff;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        #about, #skills, #projects, #contact, #certifications, #achievements {
+            text-align: center;
+        }
+
+        #skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #skills ul li {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #00509e;
+            border-radius: 5px;
+        }
+
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .project div {
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid white;
+            border-radius: 5px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            transition: transform 0.3s;
+        }
+
+        .project div img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .project div:hover {
+            transform: scale(1.05);
+        }
+
+        .certificate, .achievement {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .certificate div, .achievement div {
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .certificate div img, .achievement div img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        footer a {
+            color: #00c3ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#achievements">Achievements</a>
+        <a href="work_experience.html">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <div>
+            <h1>John Doe</h1>
+            <p>Cloud Engineer & Full-Stack Developer</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I specialize in building scalable cloud solutions and full-stack web applications. With a passion for clean code and cutting-edge technology, I bring ideas to life efficiently and effectively.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Docker</li>
+            <li>AWS</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <div>
+                <img src="https://source.unsplash.com/300x200/?technology" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A web application for real-time collaboration.</p>
+                <a href="https://github.com/yourgithub/project1" target="_blank">View on GitHub</a>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/300x200/?coding" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Automated deployment system using Docker and AWS.</p>
+                <a href="https://github.com/yourgithub/project2" target="_blank">View on GitHub</a>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/300x200/?development" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>E-commerce platform with payment integration.</p>
+                <a href="https://github.com/yourgithub/project3" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certificate">
+            <div>
+                <img src="https://source.unsplash.com/200x150/?certificate" alt="Certification 1">
+                <p>AWS Certified Solutions Architect</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/200x150/?badge" alt="Certification 2">
+                <p>Google Cloud Professional Engineer</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements</h2>
+        <div class="achievement">
+            <div>
+                <img src="https://source.unsplash.com/200x150/?award" alt="Achievement 1">
+                <p>Best KPI Performance Award 2023</p>
+            </div>
+            <div>
+                <img src="https://source.unsplash.com/200x150/?recognition" alt="Achievement 2">
+                <p>Employee of the Year 2022</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 John Doe. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

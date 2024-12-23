@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Experience</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #001f3f, #00509e);
+        color: white;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #00c3ff;
+      }
+
+      section {
+        padding: 80px 20px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 2.5rem;
+      }
+
+      .timeline {
+        position: relative;
+        padding: 20px 0;
+        margin: 0;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: #00c3ff;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .timeline-item:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-item .content {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 8px;
+        width: 45%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .timeline-item .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background: #00c3ff;
+        border: 3px solid white;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .timeline-item:nth-child(odd) .circle {
+        left: calc(50% - 2px);
+      }
+
+      .timeline-item:nth-child(even) .circle {
+        left: calc(50% - 2px);
+      }
+
+      @media screen and (max-width: 768px) {
+        .timeline::before {
+          display: none;
+        }
+
+        .timeline-item {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .timeline-item .content {
+          width: 90%; 
+          max-width: 400px; 
+          text-align: center; 
+        }
+
+        .timeline-item .circle {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#certifications">Certifications</a>
+      <a href="index.html#achievements">Achievements</a>
+      <a href="#">Experience</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="container">
+      <h1>Work Experience</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="content">
+            <h3>Cloud Engineer</h3>
+            <p>Company A</p>
+            <p>Jan 2020 - Present</p>
+            <p>
+              Implemented scalable cloud solutions using AWS, enhancing system
+              reliability and reducing costs by 30%.
+            </p>
+          </div>
+          <div class="circle"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="content">
+            <h3>Full-Stack Developer</h3>
+            <p>Company B</p>
+            <p>Jun 2017 - Dec 2019</p>
+            <p>
+              Developed and maintained web applications with React and Node.js,
+              improving user engagement by 40%.
+            </p>
+          </div>
+          <div class="circle"></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="content">
+            <h3>Junior Developer</h3>
+            <p>Company C</p>
+            <p>Jan 2015 - May 2017</p>
+            <p>
+              Contributed to building internal tools that streamlined workflows,
+              saving 10 hours weekly for the team.
+            </p>
+          </div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
